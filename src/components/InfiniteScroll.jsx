@@ -55,7 +55,7 @@ const InfiniteScroll = () => {
                     height={192} // Set height (adjust based on your design)
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
-                  <h2 className="text-lg font-bold">{card.title}</h2>
+                  <h2 className="text-lg font-bold text-black">{card.title}</h2>
                   <p className="text-sm text-gray-400">{card.description}</p>
                   <span className="mt-2 text-xl font-semibold text-green-500">
                     {card.price}

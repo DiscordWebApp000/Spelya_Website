@@ -97,10 +97,10 @@ const Animatedbar = () => {
                     </h1>
                     {/* Butonlar */}
                     <div className="flex flex-col md:flex-row gap-4 text-lg">
-                        <button className="bg-black flex-1 text-center text-primary py-4 px-6 rounded-xl hover:bg-white hover:text-black duration-200">
+                        <button className="bg-white flex-1 text-center text-primary py-4 px-6 rounded-xl hover:bg-[#FCECDD] hover:text-black duration-200">
                             Explore Now <FaArrowUp className="text-lg rotate-45 inline-block" />
                         </button>
-                        <button className="bg-black flex-1 text-center text-primary py-4 px-6 rounded-xl hover:bg-white hover:text-black duration-200">
+                        <button className="bg-white flex-1 text-center text-primary py-4 px-6 rounded-xl hover:bg-[#FCECDD] hover:text-black duration-200">
                             Create Your First NFT <FaArrowUp className="text-lg rotate-45 inline-block" />
                         </button>
                     </div>

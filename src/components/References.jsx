@@ -8,8 +8,19 @@ import Image from 'next/image';
 const References = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col mt-10 md:mt-20">
-      {/* Updated heading with gradient background and shadow effect */}
-      <h1 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary border-b-4 border-gray-300 uppercase text-center mb-8 relative z-10">
+      <style jsx>{`
+        @keyframes rgb {
+          0% { color: rgb(0, 0, 255); }
+          25% { color: rgb(0, 128, 255); }
+          50% { color: rgb(0, 255, 255); }
+          75% { color: rgb(128, 0, 255); }
+          100% { color: rgb(0, 0, 255); }
+        }
+        .rgb-text {
+          animation: rgb 8s infinite ease-in-out;
+        }
+      `}</style>
+      <h1 className="text-2xl md:text-3xl font-bold uppercase text-center mb-8 relative z-10 rgb-text">
         BAŞLICA Referanslarımız
       </h1>
 

@@ -33,7 +33,7 @@ export default function Home() {
       </div>
       <div className="container flex flex-col justify-center items-center">
         <FadeIn>
-        <Licences />
+       {/* <Licences /> */}
         </FadeIn>
        <FadeIn className="p-10">
         <News max={4} news={false}  />

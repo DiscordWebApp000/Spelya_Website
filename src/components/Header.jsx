@@ -7,7 +7,7 @@ import { GoChevronDown } from "react-icons/go";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaXmark } from "react-icons/fa6";
-import { FaGlobe, FaUser } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { VerifyLogin } from "@/app/libs/VerifyLogin";
@@ -39,11 +39,6 @@ const Header = () => {
       href: "/about",
     },
     {
-      id:3,
-      title: t('licence'),
-      href: "/license",
-    },
-    {
       id:4,
       title: t('contact'),
       href: "/contact",
@@ -55,6 +50,14 @@ const Header = () => {
     }
 
   ]
+
+  {/*
+  {
+      id:3,
+      title: t('licence'),
+      href: "/license",
+    },
+  */}
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -69,16 +72,16 @@ const Header = () => {
   return (
     <header
       className={clsx(
-        "z-20 top-0 shadow-xl fixed  bg-transparent backdrop-blur-3xl  duration-500   flex  uppercase  text-white lg:text-[#525253] font-extrabold lg:justify-center lg:max-h-[90px] justify-between  items-center  py-2 px-7",
+        "z-20 top-0 shadow-xl fixed w-full bg-transparent backdrop-blur-3xl duration-500 flex uppercase text-white lg:text-[#525253] font-extrabold lg:justify-center lg:max-h-[90px] justify-between items-center py-2 px-7",
         {
-          "left-0 w-full  duration-500": isDown,
+          "left-0 duration-500": isDown,
         },
         {
-          "container left-auto": !isDown,
+          "left-0": !isDown,
         }
       )}
     >
-      <div className="navbar flex w-full justify-between">
+      <div className="navbar flex w-full justify-between max-w-7xl mx-auto">
         <Link href="/" className="lg:flex-none  flex-initial">
           <Image
             src="/img/spelya_logo.png"
@@ -170,8 +173,6 @@ const Header = () => {
                 </div>
                 <div className="dropdown dropdown-hover hover:dropdown-open dropdown-left dropdown-top ">
             <div tabIndex={0} role="button" className=" text-3xl flex gap-1 items-center justify-center">
-              <FaUser className="hover:text-primary duration-300" />
-              <GoChevronDown className="text-xl" />
 
             </div>
             <ul
@@ -263,8 +264,6 @@ const Header = () => {
 
           <div className="dropdown dropdown-hover hover:dropdown-open dropdown-left dropdown-bottom">
             <div tabIndex={0} role="button" className=" text-3xl flex gap-1 items-center justify-center">
-              <FaUser className="hover:text-primary duration-300" />
-              <GoChevronDown className="text-xl" />
 
             </div>
             <ul
